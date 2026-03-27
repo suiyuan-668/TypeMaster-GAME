@@ -37,7 +37,7 @@
     git clone [https://github.com/suiyuan-668/TYPE-MASTER-GAME.git](https://github.com/suiyuan-668/TYPE-MASTER-GAME.git)
     ```
 2.  **运行项目**：
-    * 直接双击 `index.html` 文件即可在浏览器中打开。
+    * 直接双击 `TypeMaster-GAME.html` 文件即可在浏览器中打开。
     * 或者使用 VS Code 的 `Live Server` 插件以获得更好的体验。
 
 ---
