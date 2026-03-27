@@ -32,9 +32,9 @@
 
 由于本项目是基于 Web 技术开发，你可以直接通过浏览器运行：
 
-1.  **克隆仓库**：
+1.  **GitHub Pages**：
     ```bash
-    git clone [https://github.com/suiyuan-668/TYPE-MASTER-GAME.git](https://github.com/suiyuan-668/TYPE-MASTER-GAME.git)
+     [https://github.com/suiyuan-668/TYPE-MASTER-GAME.git](https://github.com/suiyuan-668/TYPE-MASTER-GAME.git)
     ```
 2.  **运行项目**：
     * 直接双击 `TypeMaster-GAME.html` 文件即可在浏览器中打开。
