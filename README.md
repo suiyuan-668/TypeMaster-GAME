@@ -26,14 +26,9 @@
 ---
 
 ## 📸 界面预览
+![网页图1](https://github.com/user-attachments/assets/c2b0f015-d299-44f8-bd73-be6e9afd3f4f)<img width="1876" height="920" alt="网页图2" src="https://github.com/user-attachments/assets/e0f87ce9-6d1e-4be1-bd69-c6f31b2f353e" />|![网页图3](https://github.com/user-attachments/assets/46f1b489-a58d-41be-83dd-6278a4250048)
 
-*(建议在此处上传你的项目截图到 GitHub 后替换链接)*
 
-| 首页配置 | 练习界面 | 结算统计 |
-| :--- | :--- | :--- |
-| ![Main](path/to/your/screenshot1.png) | ![Typing](path/to/your/screenshot2.png) | ![Result](path/to/your/screenshot3.png) |
-
----
 
 ## 🚀 快速开始
 
