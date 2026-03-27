@@ -41,7 +41,7 @@
 
 1.  **克隆仓库**：
     ```bash
-    git clone [https://github.com/你的用户名/TYPE-MASTER-NEO.git](https://github.com/你的用户名/TYPE-MASTER-NEO.git)
+    git clone [https://github.com/suiyuan-668/TYPE-MASTER-GAME.git](https://github.com/suiyuan-668/TYPE-MASTER-GAME.git)
     ```
 2.  **运行项目**：
     * 直接双击 `index.html` 文件即可在浏览器中打开。
