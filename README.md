@@ -1,7 +1,5 @@
 # TYPE MASTER GAME
-
-![Version](https://img.shields.io/badge/Version-1.0.0-blue)
-![Author](https://img.shields.io/badge/Author-suiyuan--668-orange)
+![Version](https://img.shields.io/badge/Version-1.0-ff2d55) ![License](https://img.shields.io/badge/License-MIT-green) ![Platform](https://img.shields.io/badge/Platform-Web-blue)
 
 **TYPE MASTER GAME** 是一款极简主义、高性能的 Web 端打字练习游戏。
 
@@ -26,7 +24,7 @@
 ---
 
 ## 📸 界面预览
-![网页图1](https://github.com/user-attachments/assets/c2b0f015-d299-44f8-bd73-be6e9afd3f4f)<img width="1876" height="920" alt="网页图2" src="https://github.com/user-attachments/assets/e0f87ce9-6d1e-4be1-bd69-c6f31b2f353e" />|![网页图3](https://github.com/user-attachments/assets/46f1b489-a58d-41be-83dd-6278a4250048)
+![网页图1](https://github.com/user-attachments/assets/c2b0f015-d299-44f8-bd73-be6e9afd3f4f)<img width="1876" height="920" alt="网页图2" src="https://github.com/user-attachments/assets/e0f87ce9-6d1e-4be1-bd69-c6f31b2f353e" />![网页图3](https://github.com/user-attachments/assets/46f1b489-a58d-41be-83dd-6278a4250048)
 
 
 
@@ -60,14 +58,6 @@
 4.  **查看结果**：完成后系统会弹出详细结算单，并将数据自动存入历史战绩中。
 
 ---
-
-## 👤 作者
-
-* **suiyuan-668**
-* GitHub: [suiyuan-668](https://github.com/suiyuan-668)
-
----
-
-## 📄 许可证
-
-本项目采用 [MIT License](LICENSE) 许可协议。
+> * **作者**：Designed by [Suiyuan](https://space.bilibili.com/471454900)。
+> * **“Google Gemini AI 对本项目起到一定辅助作用”**
+  
