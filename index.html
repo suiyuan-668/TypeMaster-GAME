@@ -151,7 +151,7 @@
             </select>
             字数: <input type="number" id="genCount" value="50" min="5" max="500" style="width:60px">
             <button onclick="generateText()">立即生成</button>
-            <div id="preview-area" style="background:rgba(0,0,0,0.05); padding:10px; height:100px; overflow:auto; margin:10px 0; font-family:monospace; font-size:0.9rem; white-space: pre-wrap;">尚未载入文本...</div>
+            <div id="preview-area" style="background:rgba(0,0,0,0.05); padding:10px; height:100px; overflow:auto; margin:10px 0; font-family:monospace; font-size:0.9rem; white-space: pre-wrap; word-break: break-all;">尚未载入文本...</div>
         </div>
 
         <div class="window">
@@ -258,7 +258,7 @@
 
     function generateText() {
         const type = document.getElementById('genLang').value;
-        const count = document.getElementById('genCount').value;
+        const count = Math.min(parseInt(document.getElementById('genCount').value) || 0, 500);
         const pools = {
             en: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZIl",
             sym: "!@#$%^&*()_+-=[]{}|;':\",./<>?`~ ",
@@ -282,8 +282,9 @@
         } else {
             rawText = await file.text();
         }
-        activeText = rawText.replace(/[^\x00-\x7F]/g, "").replace(/\r?\n/g, " ").trimEnd();
-        document.getElementById('preview-area').innerText = activeText.slice(0, 500) + (activeText.length > 500 ? "..." : "");
+        // 提取 ASCII 字符并限制 500 字上限
+        activeText = rawText.replace(/[^\x00-\x7F]/g, "").replace(/\r?\n/g, " ").trimEnd().slice(0, 500);
+        document.getElementById('preview-area').innerText = activeText;
     };
 
     function updateModeUI() {
@@ -562,7 +563,6 @@
 
         const progressPercent = ((validHits / activeText.length) * 100).toFixed(1) + "%";
 
-        // 新增逻辑判断是否失败
         let isFailed = false;
         let failReason = "";
 
@@ -575,7 +575,6 @@
                 failReason = "准确率过低，将不记录本次成绩";
             }
         } else {
-            // 练习模式只有时间用完算失败
             if (!isFinished) {
                 isFailed = true;
                 failReason = "时间已耗尽，将不记录本次成绩";
@@ -585,11 +584,9 @@
         if(isFailed) {
             playTone(100, 0.5, 'square'); 
             showResult("FAIL", wpm, finalAcc, `${note} (${failReason})`, "", blindLevelValue, finishTimeSec.toFixed(1)+"s", isStrict);
-            // 失败不保存成绩
             return;
         }
 
-        // 成功流程
         playTone(523, 0.1); setTimeout(()=>playTone(659, 0.1), 100); setTimeout(()=>playTone(784, 0.2), 200);
 
         let tag = "";
@@ -645,7 +642,6 @@
 
     function closeModalOnly() {
         document.getElementById('result-modal').style.display = 'none';
-        // 提示玩家如何退出
         const exitBtn = document.getElementById('game-exit-btn');
         exitBtn.innerText = "查看完毕，点此返回";
         exitBtn.style.background = "var(--primary)";
@@ -660,7 +656,6 @@
         document.getElementById('result-modal').style.display = 'none';
         document.getElementById('game-screen').classList.remove('active');
         document.getElementById('home-screen').classList.add('active');
-        // 还原按钮文字
         document.getElementById('game-exit-btn').innerText = "退出";
         document.getElementById('game-exit-btn').style.background = "#666";
         renderHistory();
